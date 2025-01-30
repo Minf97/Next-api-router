@@ -63,6 +63,13 @@ You can author your README using Visual Studio Code. Here are some useful editor
 * Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
 * Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
 
+## 调试指南
+
+### 开发环境设置
+1. 克隆项目后运行 `pnpm install` 安装依赖
+2. 在 VS Code 中按 F5 启动调试, 或者选择`Debug Extension in Demo`进行调试
+3. 将会打开一个新的 VS Code 窗口，其中已加载此扩展
+
 ## For more information
 
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)

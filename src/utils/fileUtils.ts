@@ -35,15 +35,18 @@ export async function detectHttpMethods(filePath: string): Promise<MethodInfo[]>
     const content = await fs.promises.readFile(filePath, 'utf8');
     const lines = content.split('\n');
     const methodInfos: MethodInfo[] = [];
-    
+    // console.log(lines, "lines");
     const httpMethods = ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'];
     
     lines.forEach((line, index) => {
+      console.log(line.includes(`export const ${'GET'}`), line,"line");
+      
       httpMethods.forEach(method => {
         if (
-          line.includes(`export async function ${method.toLowerCase()}`) ||
-          line.includes(`export function ${method.toLowerCase()}`) ||
-          line.includes(`handler.${method.toLowerCase()}`)
+          line.includes(`export async function ${method}`) ||
+          line.includes(`export function ${method}`) ||
+          line.includes(`handler.${method}`) ||
+          line.includes(`export const ${method}`)
         ) {
           methodInfos.push({ method, line: index });
         }

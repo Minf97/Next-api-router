@@ -67,7 +67,7 @@ export class NextApiTreeProvider implements vscode.TreeDataProvider<ApiItem> {
           
           methodInfos.forEach(({ method, line }) => {
             apiItems.push(new ApiItem(
-              apiPath || '/',
+              `${apiPath || '/'} [${method}]`,
               fullPath,
               vscode.TreeItemCollapsibleState.None,
               [method],
@@ -96,7 +96,7 @@ export class NextApiTreeProvider implements vscode.TreeDataProvider<ApiItem> {
           
           methodInfos.forEach(({ method, line }) => {
             apiItems.push(new ApiItem(
-              apiPath || '/',
+              `${apiPath || '/'} [${method}]`,
               fullPath,
               vscode.TreeItemCollapsibleState.None,
               [method],

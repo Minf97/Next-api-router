@@ -1,0 +1,140 @@
+{
+  "name": "nextjs-router",
+  "displayName": "Nextjs-router",
+  "description": "🔍 Next.js API Route Navigator | 自动聚合项目中的 API 路由  ",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:package.json"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "nextjs-router",
+          "title": "nextjs-router",
+          "icon": "media/api-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "nextjs-router": [
+        {
+          "id": "nextApiExplorer",
+          "name": "API Routes"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "nextApiExplorer.refresh",
+        "title": "刷新",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "nextApiExplorer.gotoFile",
+        "title": "打开文件"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "nextApiExplorer.refresh",
+          "when": "view == nextApiExplorer",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "commit": "git-cz",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.4.0",
+    "eslint": "^9.16.0",
+    "husky": "^9.1.7",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "disableScopeLowerCase": false,
+      "types": {
+        "feat": {
+          "title": "新功能",
+          "description": "新功能"
+        },
+        "fix": {
+          "title": "问题修复",
+          "description": "问题修复"
+        },
+        "style": {
+          "title": "页面样式/代码风格变动",
+          "description": "页面样式/代码风格变动（比如将Header的margin从20px改为16px，或者是只做了代码风格相关的改动，例如格式化、缺少分号等）"
+        },
+        "chore": {
+          "title": "杂项",
+          "description": "杂项"
+        },
+        "docs": {
+          "title": "文档更新",
+          "description": "文档更新"
+        },
+        "refactor": {
+          "title": "代码重构",
+          "description": "代码重构"
+        },
+        "perf": {
+          "title": "性能优化",
+          "description": "性能优化"
+        },
+        "test": {
+          "title": "测试更新",
+          "description": "测试更新"
+        },
+        "ci": {
+          "title": "CI配置",
+          "description": "CI配置"
+        },
+        "revert": {
+          "title": "回退",
+          "description": "回退"
+        },
+        "build": {
+          "title": "项目工具",
+          "description": "项目工具"
+        }
+      }
+    }
+  }
+}

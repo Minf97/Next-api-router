@@ -4,7 +4,7 @@ import { NextApiTreeProvider } from './providers/NextApiTreeProvider';
 export function activate(context: vscode.ExtensionContext) {
   // 创建视图容器
   const nextApiProvider = new NextApiTreeProvider();
-  const treeView = vscode.window.createTreeView('nextApiExplorer', {
+  vscode.window.createTreeView('nextApiExplorer', {
     treeDataProvider: nextApiProvider,
     showCollapseAll: true
   });

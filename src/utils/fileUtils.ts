@@ -39,7 +39,6 @@ export async function detectHttpMethods(filePath: string): Promise<MethodInfo[]>
     const httpMethods = ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'];
     
     lines.forEach((line, index) => {
-      console.log(line.includes(`export const ${'GET'}`), line,"line");
       
       httpMethods.forEach(method => {
         if (
@@ -53,8 +52,8 @@ export async function detectHttpMethods(filePath: string): Promise<MethodInfo[]>
       });
     });
     
-    return methodInfos.length ? methodInfos : [{ method: 'GET', line: 0 }];
+    return methodInfos.length ? methodInfos : [{ method: 'default', line: 0 }];
   } catch {
-    return [{ method: 'GET', line: 0 }];
+    return [{ method: 'detectHttpMethodsError', line: 0 }];
   }
 } 

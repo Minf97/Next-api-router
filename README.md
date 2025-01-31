@@ -1,78 +1,40 @@
-# nextjs-router README
+# Next.js API Route Navigator
 
-This is the README for your extension "nextjs-router". After writing up a brief description, we recommend including the following sections.
+🔍 自动聚合和导航您 Next.js 项目中的 API 路由 | Automatically organize and navigate API routes in your Next.js project
 
-## Features
+[English](./README_EN.md) | 简体中文
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## ✨ 特性
 
-For example if there is an image subfolder under your extension project workspace:
+- 🔍 自动扫描并展示项目中的所有 API 路由
+- 📁 树形结构展示 API 路由层级
+- 🚀 快速跳转到对应的路由文件
+- 🔄 实时更新路由列表
+- 💡 支持 Next.js Pages Router 和 App Router
 
-\!\[feature X\]\(images/feature-x.png\)
+## 📥 安装
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+在 VS Code 扩展市场中搜索 "Next.js API Route Navigator" 或点击 [这里](https://marketplace.visualstudio.com/items?itemName=YourPublisherID.nextjs-api-router) 安装。
 
-## Requirements
+## 🎯 使用方法
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. 在 VS Code 中打开包含 Next.js 项目的文件夹
+2. 点击侧边栏中的 API 图标
+3. 查看自动聚合的 API 路由列表
+4. 点击路由可快速跳转到对应文件
 
-## Extension Settings
+## 📸 预览
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+![预览图](./media/preview.png)
 
-For example:
+## ⚙️ 配置
 
-This extension contributes the following settings:
+暂无配置项
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## 🤝 贡献
 
-## Known Issues
+欢迎提交 Issue 和 Pull Request！
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## 📄 许可
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## 调试指南
-
-### 开发环境设置
-1. 克隆项目后运行 `pnpm install` 安装依赖
-2. 在 VS Code 中按 F5 启动调试, 或者选择`Debug Extension in Demo`进行调试
-3. 将会打开一个新的 VS Code 窗口，其中已加载此扩展
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+MIT License © 2024

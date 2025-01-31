@@ -1,14 +1,53 @@
 {
-  "name": "nextjs-router",
-  "displayName": "Nextjs-router",
-  "description": "🔍 Next.js API Route Navigator | 自动聚合项目中的 API 路由  ",
+  "name": "nextjs-api-router",
+  "displayName": "Next.js API Route Navigator",
+  "description": "🔍 Next.js API Route Navigator - Automatically organize and navigate API routes in your Next.js project | Next.js API 路由导航器 - 自动聚合和导航您项目中的 API 路由",
   "version": "0.0.1",
+  "publisher": "Minf",
   "engines": {
     "vscode": "^1.96.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Programming Languages",
+    "Snippets",
+    "Visualization"
   ],
+  "keywords": [
+    "nextjs",
+    "next.js",
+    "nextjs-api-router",
+    "nextjs api router",
+    "nextjs router",
+    "next api router",
+    "api",
+    "router",
+    "route",
+    "navigator",
+    "typescript",
+    "javascript"
+  ],
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#1a1a1a",
+    "theme": "dark"
+  },
+  "badges": [
+    {
+      "url": "https://img.shields.io/visual-studio-marketplace/v/YourPublisherID.nextjs-api-router",
+      "href": "https://marketplace.visualstudio.com/items?itemName=YourPublisherID.nextjs-api-router",
+      "description": "VS Marketplace Version"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Minf97/Next-api-router"
+  },
+  "homepage": "https://github.com/Minf97/Next-api-router#readme",
+  "bugs": {
+    "url": "https://github.com/Minf97/Next-api-router/issues"
+  },
+  "license": "MIT",
   "activationEvents": [
     "workspaceContains:package.json"
   ],
